@@ -6,58 +6,26 @@
 // - มีกำหนดสัก 3 หมวดหมู่ = แฮรี่ มาเวล โดเรม่อน
 
 
-
+const harryPotterCat = ['harry potter', 'dobby', 'hagrid']
+const marvelCat = ['thor', 'iron man','hulk']
+const doraemonCat = ['gian', 'nobita', 'doraeman']
 
 // สุ่มเลือก cat
 const comAns = () => {
-    const harryPotterCat = ['harry potter', 'dobby', 'hagrid']
-    const marvelCat = ['thor', 'iron man','hulk']
-    const doraemonCat = ['gian', 'nobita', 'doraeman']
 
     const cat = Math.floor(Math.random()*3)
     const inCat = Math.floor(Math.random()*3)
 
     if (cat === 0) {
-        console.log('harryPotterCat')
+        return harryPotterCat[inCat]
     } else if (cat === 1) {
-        console.log('marvelCat')
+        return marvelCat[inCat]
     } else if (cat === 2) {
-        console.log('doraemonCat')
+        return doraemonCat[inCat]
+    } else {
+        console.log('error')
     }
-
-
-        // switch (i) {
-        //     case 0:
-        //         return 'harryPotterCat'
-        //         break
-        //     case 1:
-        //         return 'marvelCat'
-        //         break
-        //     case 2:
-        //         return 'doraemonCat'
-        //         break
-        // }
-
-        // if (i===0) {
-        //     ranHary = Math.floor(Math.random()*3)
-        //     for (let j=0; j<harryPotterCat.length; j++) {
-        //         return ranHary === j ? harryPotterCat[j] : console.log('error!') 
-        //     }
-            
-        // } else if (i===1) {
-        //     ranMar = Math.floor(Math.random()*3)
-        //     for (let k=0; k<marvelCat.length; k++) {
-        //         return ranMar === k ? marvelCat[k] : console.log('error!') 
-        //     }
-            
-        // } else if (i===2) {
-        //     ranDo = Math.floor(Math.random()*3)
-        //     for (let m=0; m<doraemonCat.length; m++) {
-        //         return ranDo === m ? doraemonCat[m] : console.log('error!') 
-        //     }
-            
-        // }
-    }
+}
 
 // console.log(catagory())
 
@@ -79,8 +47,8 @@ const checkAns = (ans) => {
 const run = () => {
     const comAnswer = comAns()
     console.log(comAnswer)
-    // const userAns = userInput('harry potter', comAnswer)
-    // checkAns()
+    const userAns = userInput('harry potter', comAnswer)
+    checkAns()
 }
 
 run()
